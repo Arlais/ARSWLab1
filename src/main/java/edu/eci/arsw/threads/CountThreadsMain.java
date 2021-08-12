@@ -11,8 +11,15 @@ package edu.eci.arsw.threads;
  */
 public class CountThreadsMain {
     
-    public static void main(String a[]){
-        
+    public static void main( String[] args ){
+        CountThread Hilo1 =new CountThread(0,100);
+        CountThread Hilo2 =new CountThread(99,200);
+        CountThread Hilo3 =new CountThread(199,300);
+        Hilo1.start();
+        Hilo2.start();
+        Hilo3.start();
+        //Hilo1.run();
+        //Hilo2.run();
+        //Hilo3.run();
     }
-    
 }

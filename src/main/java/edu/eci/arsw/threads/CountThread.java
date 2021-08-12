@@ -9,6 +9,16 @@ package edu.eci.arsw.threads;
  *
  * @author hcadavid
  */
-public class CountThread {
-    
+public class CountThread extends Thread {
+	public int inicio;
+	public int fin;
+	public CountThread(int i, int f) {
+		inicio=i;
+		fin=f;
+	}
+    public void run() {
+    	for(int i=inicio; i<fin;i++) {
+    		System.out.println(i);
+    	}
+    }
 }
