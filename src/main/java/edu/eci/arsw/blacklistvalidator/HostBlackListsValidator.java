@@ -40,18 +40,7 @@ public class HostBlackListsValidator {
         int limit=(int) Math.ceil(skds.getRegisteredServersCount()/n);
         
         int checkedListsCount=0;
-        
-        /*for (int i=0;i<skds.getRegisteredServersCount() && ocurrencesCount<BLACK_LIST_ALARM_COUNT;i++){
-            checkedListsCount++;
-            
-            if (skds.isInBlackListServer(i, ipaddress)){
-                
-                blackListOcurrences.add(i);
-                
-                ocurrencesCount++;
-            }
-        }*/
-        
+
         for (int i=0;i<n; i++) {
         	BlackThread Hilo= new BlackThread(i*limit,(i+1)*limit,ipaddress);
         	Hilo.start();
